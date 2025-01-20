@@ -1,48 +1,56 @@
-// Scroll Back to Top Button
-const backToTopBtn = document.createElement('button');
-backToTopBtn.textContent = 'Top';
-backToTopBtn.style = `
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  padding: 10px 15px;
-  background-color: #007BFF;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  display: none;
-`;
-
-document.body.appendChild(backToTopBtn);
-
-window.addEventListener('scroll', () => {
-  backToTopBtn.style.display = window.scrollY > 200 ? 'block' : 'none';
-});
-
-backToTopBtn.addEventListener('click', () => {
-  window.scrollTo({ top: 0, behavior: 'smooth' });
-});
-
-// Show More Projects Button
-const showMoreBtn = document.createElement('button');
-showMoreBtn.textContent = 'Show More';
-showMoreBtn.style = `
-  margin-top: 10px;
-  padding: 10px;
-  background-color: #28a745;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-`;
-
-const projectsSection = document.getElementById('projects');
-projectsSection.appendChild(showMoreBtn);
-
-showMoreBtn.addEventListener('click', () => {
-  const newProject = document.createElement('p');
-  newProject.innerHTML = `<strong>Project 3:</strong> Blog Website - A platform for creating and managing blogs.`;
-  projectsSection.appendChild(newProject);
-  showMoreBtn.remove();
-});
+// Function to handle email link creation and navigation
+const sendEmail = () => {
+    const email = "anselmobelmar@gmail.com";  // Replace with your email address
+    const subject = "Inquiry from Portfolio";
+    const body = "Hello, I would like to get in touch with you regarding your work.";
+    
+    // Create a mailto link and navigate to it
+    const mailtoLink = `mailto:${email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    window.location.href = mailtoLink;
+  };
+  
+  // Function to manage active tab class
+  const setActiveTab = (event) => {
+    const tabs = document.querySelectorAll('.tab-link');
+    tabs.forEach(tab => tab.classList.remove('active')); // Remove active class from all tabs
+    event.target.classList.add('active');  // Add active class to the clicked tab
+  };
+  
+  // Event listener for the "Email Me" button
+  const emailButton = document.getElementById('emailButton');
+  if (emailButton) {
+    emailButton.addEventListener('click', sendEmail);
+  }
+  
+  // Event listener for all tab links
+  const tabs = document.querySelectorAll('.tab-link');
+  tabs.forEach(tab => {
+    tab.addEventListener('click', setActiveTab);
+  });
+  
+  // Optionally, set the first tab to be active by default
+  document.querySelector('.tab-link')?.classList.add('active');
+  
+  // Create the "Back to Top" button dynamically using JavaScript
+  const backToTopBtn = document.createElement('button');
+  backToTopBtn.textContent = "↑"; // Button text
+  backToTopBtn.id = "backToTopBtn";
+  document.body.appendChild(backToTopBtn);
+  
+  // Function to show or hide the Back to Top button based on scroll position
+  window.onscroll = function() {
+    if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+      backToTopBtn.style.display = "block"; // Show the button when scrolling down
+    } else {
+      backToTopBtn.style.display = "none"; // Hide the button when at the top
+    }
+  };
+  
+  // Function to scroll back to top
+  backToTopBtn.addEventListener('click', () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth' // Smooth scroll effect
+    });
+  });
+  
