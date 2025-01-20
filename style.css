@@ -1,0 +1,201 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+    background: linear-gradient(to right, #f9f9f9, #e0f7fa);
+    color: #333;
+  }
+  
+  /* Header Styling */
+  header {
+    background: linear-gradient(to right, #4caf50, #81c784);
+    color: #fff;
+    padding: 2rem 0;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  header p {
+    font-size: 1.2rem;
+    font-weight: 300;
+  }
+  
+  header nav a {
+    margin: 0 1rem;
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: bold;
+    transition: color 0.3s ease;
+  }
+  
+  header nav a:hover {
+    color: #ffd740;
+  }
+  
+  /* Section Styling */
+  .section {
+    padding: 2rem;
+    margin: 2rem auto;
+    background: linear-gradient(to bottom, #ffffff, #e3f2fd);
+    border-radius: 10px;
+    max-width: 800px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease;
+  }
+  
+  .section:hover {
+    transform: translateY(-5px);
+  }
+  
+  h2 {
+    margin-bottom: 1rem;
+    color: #3f51b5;
+    font-size: 1.8rem;
+    text-transform: uppercase;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* About Me Styling */
+  #about-me p {
+    color: #444;
+    font-size: 1.1rem;
+  }
+  
+  /* Education and Experience Lists */
+  ul {
+    list-style: square;
+    margin: 1rem 0;
+    padding-left: 1.5rem;
+  }
+  
+  ul li {
+    margin-bottom: 0.5rem;
+    color: #1e88e5;
+    font-size: 1rem;
+  }
+  
+  /* Skills Section */
+  #skills ul li {
+    display: inline-block;
+    background: #ffcc80;
+    color: #333;
+    padding: 0.5rem 1rem;
+    margin: 0.5rem;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  #skills ul li:hover {
+    transform: scale(1.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Form Styling */
+  form {
+    margin-top: 1rem;
+  }
+  
+  form input, form textarea, form button {
+    display: block;
+    width: 100%;
+    margin: 0.8rem 0;
+    padding: 0.8rem;
+    font-size: 1rem;
+    border: 2px solid #64b5f6;
+    border-radius: 5px;
+  }
+  
+  form input:focus, form textarea:focus {
+    border-color: #42a5f5;
+    outline: none;
+  }
+  
+  form button {
+    background-color: #ff7043;
+    color: white;
+    border: none;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+  }
+  
+  form button:hover {
+    background-color: #d84315;
+    transform: scale(1.05);
+  }
+  
+  /* Footer Styling */
+  footer {
+    text-align: center;
+    padding: 1rem;
+    background: linear-gradient(to right, #3f51b5, #5c6bc0);
+    color: #ffffff;
+    font-size: 0.9rem;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  footer p {
+    margin: 0.5rem 0;
+  }
+  
+  /* Scroll to Top Button */
+  button {
+    font-family: inherit;
+    font-weight: bold;
+  }
+  
+  /* Button in Projects */
+  #projects button {
+    display: inline-block;
+    margin-top: 1rem;
+    padding: 0.8rem 1.5rem;
+    background: #29b6f6;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  #projects button:hover {
+    background: #0277bd;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    header h1 {
+      font-size: 2rem;
+    }
+  
+    header nav a {
+      margin: 0 0.5rem;
+      font-size: 0.9rem;
+    }
+  
+    .section {
+      padding: 1.5rem;
+    }
+  
+    h2 {
+      font-size: 1.5rem;
+    }
+  
+    form input, form textarea, form button {
+      font-size: 0.9rem;
+    }
+  }
+  
