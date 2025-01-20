@@ -12,7 +12,6 @@
     line-height: 1.6;
   }
   
-  /* Header Styling */
   header {
     background: #4caf50;
     color: white;
@@ -39,7 +38,6 @@
     text-decoration: underline;
   }
   
-  /* Section Styling */
   .section {
     background: white;
     margin: 2rem auto;
@@ -50,10 +48,10 @@
     transition: transform 0.3s ease, box-shadow 0.3s ease;
   }
   
-  /* Add hover effect to all sections */
+  
   .section:hover {
-    transform: translateY(-5px); /* Moves the section up */
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15); /* Adds shadow on hover */
+    transform: translateY(-5px); 
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15); 
   }
   
   h2 {
@@ -86,61 +84,60 @@
     background: #0056b3;
   }
   
-  /* Footer Styling */
+ 
   footer {
     text-align: center;
     padding: 1rem 0;
     background: #333;
     color: white;
   }
-  /* Profile Image Styling */
+  
   .profile-pic {
     width: 150px;
     height: 150px;
-    border-radius: 50%; /* Makes the image circular */
-    object-fit: cover; /* Ensures the image fills the circle */
-    border: 3px solid #4caf50; /* Adds a border */
+    border-radius: 50%; 
+    object-fit: cover; 
+    border: 3px solid #4caf50; 
     margin: 1rem auto;
     display: block;
     opacity: 0;
-    animation: fadeInZoom 1s ease-out forwards 0.5s; /* Fade and zoom effect */
-    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transition for hover effect */
+    animation: fadeInZoom 1s ease-out forwards 0.5s; 
+    transition: transform 0.3s ease, box-shadow 0.3s ease; 
   }
   
-  /* Profile Picture Hover Animation */
+ 
   .profile-pic:hover {
-    transform: translateY(-10px); /* Moves the image upwards */
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* Adds shadow on hover */
+    transform: translateY(-10px); 
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); 
   }
   
-  /* Keyframe for Fade-in and Zoom Effect */
+  
   @keyframes fadeInZoom {
     0% {
       opacity: 0;
-      transform: scale(0.5); /* Starts scaled down */
+      transform: scale(0.5); 
     }
     100% {
       opacity: 1;
-      transform: scale(1); /* Final size is normal */
+      transform: scale(1); 
     }
   }
   
-  /* Animation for Sections on Hover (About Me, Skills, Education, Experience) */
+  
   .section-about, .section-skills, .section-education, .section-experience {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
   }
   
-  /* Hover effect for each section */
+
   .section-about:hover,
   .section-skills:hover,
   .section-education:hover,
   .section-experience:hover {
-    transform: scale(1.05); /* Slightly enlarge the section */
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1); /* Add more shadow */
+    transform: scale(1.05);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1); 
   }
   
-  /* Keyframe for Section Hover Animation */
-  @keyframes sectionHoverEffect {
+    @keyframes sectionHoverEffect {
     0% {
       transform: scale(1);
       box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
